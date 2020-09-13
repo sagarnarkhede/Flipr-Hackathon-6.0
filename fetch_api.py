@@ -35,23 +35,24 @@ def fetch_data_notifications(url):
     result = requests.get(url)
     data = result.json()
 
-    date_list = []
-    title_list = []
-    link_list = []
+    #date_list = []
+    #title_list = []
+    #link_list = []
+    notifications_dict = {}
     notification = data['data']['notifications']
     i = 0
     for item in notification:
         title = item['title']
         if len(title.split()[0]) == 10 and title[6:8]=='20':
             date = title[0:10]
-            date_list.append(date)
-            #date_dict[str(i)] = date
+            #date_list.append(date)
+            notifications_dict[date]= {title[11:]: item['link']}
             #notification_dict[title[11:]] = item['link']
-            title_list.append(title[11:])
-            link_list.append(item['link'])
-            i+=1
+            #title_list.append(title[11:])
+            #link_list.append(item['link'])
+            #i+=1
 
-    return (date_list, title_list, link_list)
+    return notifications_dict
 
 def fetch_data_hospitals_beds(url):
     result = requests.get(url)

@@ -68,7 +68,7 @@ def fetch_data_hospitals_beds(url):
     #tb_l = []
     hospitals_beds_dict = {}
     for item in regional:
-        hospital_beds_dict[item['state']] = {item['rural']:{item['ruralHospitals']:{item['ruralBeds']:{item['urbanHospitals']:{item['urbanBeds']:{item['totalHospitals']:item['totalsBeds']}}}}}}
+        hospitals_beds_dict[item['state']] = {item['ruralHospitals']:{item['ruralBeds']:{item['urbanHospitals']:{item['urbanBeds']:{item['totalHospitals']:item['totalBeds']}}}}}
         #s_l.append(item['state'])
         #rh_l.append(item['ruralHospitals'])
         #rb_l.append(item['ruralBeds'])

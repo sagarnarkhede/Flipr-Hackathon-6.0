@@ -59,14 +59,16 @@ def fetch_data_hospitals_beds(url):
     data = result.json()
 
     regional = data['data']['regional']
-    s_l = []
-    rh_l = []
-    rb_l = []
-    uh_l = []
-    ub_l = []
-    th_l = []
-    tb_l = []
+    #s_l = []
+    #rh_l = []
+    #rb_l = []
+    #uh_l = []
+    #ub_l = []
+    #th_l = []
+    #tb_l = []
+    hospitals_beds_dict = {}
     for item in regional:
+        hospital_beds_dict[item['state']] = {item['rural']:{item['ruralHospitals']:{item['ruralBeds']:{item['urbanHospitals']:{item['urbanBeds']:{item['totalHospitals']:{item['totalsBeds']}}}}}}}
         s_l.append(item['state'])
         rh_l.append(item['ruralHospitals'])
         rb_l.append(item['ruralBeds'])
@@ -75,7 +77,7 @@ def fetch_data_hospitals_beds(url):
         th_l.append(item['totalHospitals'])
         tb_l.append(item['totalBeds'])
 
-    return (s_l, rh_l, rb_l, uh_l, ub_l, th_l, tb_l)
+    return hospitals_beds_dict
 
 
 def fetch_data_medical_colleges(url):

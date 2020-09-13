@@ -68,7 +68,7 @@ def fetch_data_hospitals_beds(url):
     #tb_l = []
     hospitals_beds_dict = {}
     for item in regional:
-        hospital_beds_dict[item['state']] = {item['rural']:{item['ruralHospitals']:{item['ruralBeds']:{item['urbanHospitals']:{item['urbanBeds']:{item['totalHospitals']:{item['totalsBeds']}}}}}}}
+        hospital_beds_dict[item['state']] = {item['rural']:{item['ruralHospitals']:{item['ruralBeds']:{item['urbanHospitals']:{item['urbanBeds']:{item['totalHospitals']:item['totalsBeds']}}}}}}
         #s_l.append(item['state'])
         #rh_l.append(item['ruralHospitals'])
         #rb_l.append(item['ruralBeds'])
@@ -93,17 +93,19 @@ def fetch_data_medical_colleges(url):
     #hb_l = []
     medical_colleges_dict = {}
     for item in medical_colleges:
-        
-        state_l.append(item['state'])
-        name_l.append(item['name'])
-        city_l.append(item['city'])
-        own_l.append(item['ownership'])
-        ac_l.append(item['admissionCapacity'])
-        hb_l.append(item['hospitalBeds'])
+        medical_colleges_dict[item['state']] = {item['name']:{item['city']:{item['ownership']:{item['admissionCapacity']:item['hospitalBeds']}}}}
+
+        #state_l.append(item['state'])
+        #name_l.append(item['name'])
+        #city_l.append(item['city'])
+        #own_l.append(item['ownership'])
+        #ac_l.append(item['admissionCapacity'])
+        #hb_l.append(item['hospitalBeds'])
 
     return medical_colleges_dict
 
 #print(fetch_data_contacts(contacts_url))
 #print(fetch_data_notifications(notifications_url))
-#print(fetch_data_hospitals_beds(hospitals_beds_url))
+print(fetch_data_hospitals_beds(hospitals_beds_url))
 #print(fetch_data_medical_colleges(medical_colleges_url))
+

@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/comparisan.png') }}')">
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/45.jpeg') }}')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="page-heading">
-              <h3>Comparison of daily sample tests and confirmed cases of the patients.</h3>
+              <h3></h3>
               <span class="subheading"></span>
             </div>
           </div>
@@ -19,9 +19,122 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+
+
+        <body>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Simple Line Chart"
+    },
+    data: [{        
+        type: "line",
+        indexLabelFontSize: 55,
+        dataPoints: [
+            { y: 414},
+            { y: 450},
+            { y: 460},
+            { y: 520},// indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+            { y: 450 },
+            { y: 500 },
+            { y: 480 },
+            { y: 480 },
+            { y: 410 },// indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+             { y: 500 },
+             { y: 480 },
+             { y: 510 }
+        ]
+    }]
+});
+chart.render();
+
+}
+
+
+
+</script>
+</body>
+
+
+
+
+<body>
+<div id="chartContainer" align="left" style="height: 370px; width: 100%; "></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+<br>
+<button type="button" class="btn btn-secondary">Download</button>
+
+<br>
+<br>
+
+<div class="right">
+
+
+
+<body align="right">State:
+<select class="combo">
+<option value="Select">Select....</option>
+
+{% for key, value in l.items() %}
+<option value="html">{{key}}</option>
+{% endfor %}
+</select>
+</body>
+
+<body>Age Groups:
+<select class="combo">
+<option value="Select">Select....</option>
+<option value="html">0 to 9</option>
+<option value="html">10 to 19</option>
+<option value="html">20 to 29</option>
+<option value="html">30 to 39</option>
+<option value="html">40 to 49</option>
+<option value="html">50 to 59</option>
+<option value="html">60 to 69</option>
+<option value="html">70 to Above</option>
+</select>
+</body>
+
+<body>Gender
+<select class="combo">
+<option value="Select">Select....</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="na">NA</option>
+</select>
+</body>
+<body>
+ <br>
+ <br>
+
+<form>
+	<label for="dt">Date Range: </label>
+	 <input name="dt" type="date"/>
+	 <input name="dt" type="date"/>
+	 <br>
+   <br>
+</form>
+    Mail to:
+    <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+  
+</div>
+<button type="button" class="btn btn-light">Send</button>
+ 
+</body>
+
+
+        
+        
+        
         </div>
       </div>
     </div>

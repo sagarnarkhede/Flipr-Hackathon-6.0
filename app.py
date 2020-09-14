@@ -14,9 +14,10 @@ def notification():
     return render_template('notification.html', a=dish)
 
 
-@app.route("/comparison")
+@app.route("/deceased_person")
 def post():
-    return render_template('comparison.html')
+    a=fetch_data_medical_colleges(medical_colleges_url)
+    return render_template('comparison.html',l=a)
 
 @app.route("/hd")
 def hd():
@@ -37,6 +38,6 @@ def contact():
     send_dict = fetch_data_contacts(contacts_url)
     return render_template('contact.html', send_dict=send_dict)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+app.run(debug=True)
 

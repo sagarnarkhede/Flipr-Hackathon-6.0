@@ -106,6 +106,5 @@ def fetch_data_medical_colleges(url):
 
 #print(fetch_data_contacts(contacts_url))
 #print(fetch_data_notifications(notifications_url))
-print(fetch_data_hospitals_beds(hospitals_beds_url))
+# print(fetch_data_hospitals_beds(hospitals_beds_url))
 #print(fetch_data_medical_colleges(medical_colleges_url))
-

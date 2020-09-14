@@ -38,6 +38,7 @@ def contact():
     send_dict = fetch_data_contacts(contacts_url)
     return render_template('contact.html', send_dict=send_dict)
 
+if __name__ == '__main__':
+    app.run(debug=True)
 
-app.run(debug=True)
 

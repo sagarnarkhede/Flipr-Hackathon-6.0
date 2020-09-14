@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/5.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1> Hospitals & beds</h1>
+              <span class="subheading"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+         </form class="text-left"><h2>Hospitals & beds</h2>
+                    <p id="data"></p>
+                <table class="table table-bordered" border =  >
+	            <thead>
+		        <th scope="col"><h3>State Name</h3></th>
+		        <th scope="col"><h3>Rural Hospitals</h3></th>
+		        <th scope="col"><h3>Rural Beds</h3></th>
+		        <th scope="col"><h3>Urban Hospitals</h3></th>
+		        <th scope="col"><h3>Urban Beds</h3></th>
+		        <th scope="col"><h3>Total Hospitals</h3></th>
+		        <th scope="col"><h3>Total Beds(State Wise)</h3></th>
+	
+	            </thead>
+                   {% for l1, l1_1 in l.items() %}
+                
+                <th> {{ l1 }} </th>
+                {% for l2, l2_1 in l1_1.items() %}
+                
+                <th> <h6>{{ l2 }}</h6> </th>
+                {% for l3, l3_1 in l2_1.items() %}
+                
+                <th> <h6>{{ l3 }}</h6> </th>
+
+                {% for l4, l4_1 in l3_1.items() %}
+                
+                <th> <h6>{{ l4 }}</h6> </th>
+
+                {% for l5, l5_1 in l4_1.items() %}
+                
+                <th> <h6>{{ l5 }}</h6> </th>
+
+                {% for l6, l6_1 in l5_1.items() %}
+                
+                <th> <h6>{{ l6 }}</h6> </th>
+          
+                <th> <h6>{{ l6_1 }}</h6> </th>
+                
+                </tr>
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}
+              
+                {% endfor %}
+            </table>
+                 
+             
+       </div>
+      </div>
+    </div>
+
+   {% endblock %}

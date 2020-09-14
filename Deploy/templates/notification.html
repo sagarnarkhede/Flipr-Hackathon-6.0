@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/1.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1> Notifications & advisories</h1>
+              <span class="subheading"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+                </form class="text-left"><h2>Contact & Helpline Information :</h2>
+                    <p id="data"></p>
+                <table class="table table-bordered" border =  >
+	            <thead>
+		        <th scope="col"><h3>date</h3></th>
+		        <th scope="col"><h3>Tital</h3></th>
+		        <th scope="col"><h3>Links</h3></th>
+	
+	            </thead>
+                   {% for date, dish1 in a.items() %}
+                <tr>
+                <th> {{ date }} </th>
+                {% for tital, link in dish1.items() %}
+                
+                <th> <h6>{{ tital }}</h6> </th>
+                <td><a href= {{link}}><h6>{{link}}</h6></a> </td>
+                </tr>
+                {% endfor %}
+              
+                {% endfor %}
+            </table>
+       </div>
+      </div>
+    </div>
+
+   {% endblock %}

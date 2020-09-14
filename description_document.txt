@@ -1,0 +1,13 @@
+GitHub link:- 'https://github.com/hemantghuge/Flipr-Hackathon-6.0'
+
+Deployment Link:- 'http://infocovid19.pythonanywhere.com/'
+
+1. Clone the GitHub repo
+
+2. Use 'requirements.txt' to install the required libraries.
+
+3. Run 'python3 app.py' and the flask app will run.
+
+4. Use the prompted link to open the UI. (eg:- http://127.0.0.1:5000/)
+
+You can also use the Deployment Link directly for visiting the web page.

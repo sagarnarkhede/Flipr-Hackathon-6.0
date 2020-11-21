@@ -10,7 +10,8 @@ website is included with the following information:
 4) Comparison of daily sample tests and confirmed cases of the patients.
 
 ### Deployment Link:- http://infocovid19.pythonanywhere.com/
-
+<!--
 ## Team Members
 1) [Hemant Ghuge](https://www.linkedin.com/in/hemantghuge/)
 2) [Sagar Narkhede](https://www.linkedin.com/in/sagar-narkhede-5bb944195/)
+-->

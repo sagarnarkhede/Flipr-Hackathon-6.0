@@ -14,5 +14,3 @@ website is included with the following information:
 ## Team Members
 1) [Hemant Ghuge](https://www.linkedin.com/in/hemantghuge/)
 2) [Sagar Narkhede](https://www.linkedin.com/in/sagar-narkhede-5bb944195/)
-
-Special Thanks to [Trushant Adeshara](https://www.linkedin.com/in/trushant-adeshara-34b109174/) for helping us in UI/UX Design.

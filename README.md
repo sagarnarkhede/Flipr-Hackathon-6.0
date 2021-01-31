@@ -8,8 +8,9 @@ website is included with the following information:
 2) Notification and Advisory from the government Information. 
 3) Hospital Dashboard 
 4) Comparison of daily sample tests and confirmed cases of the patients.
-
+<!--
 ### Deployment Link:- http://infocovid19.pythonanywhere.com/
+-->
 <!--
 ## Team Members
 1) [Hemant Ghuge](https://www.linkedin.com/in/hemantghuge/)
